@@ -1,0 +1,19 @@
+ <section class="cards">
+    <div *ngFor="let user of users" class="card">
+        <div class="card-head">
+            <div class="avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <h2>{{user.name}}</h2>
+            <span>ID #: {{user.id}}</span>
+        </div>
+        <div class="card-body">
+            <span><i class="fas fa-envelope"></i> E-mail:{{user.email}}</span><span><i class="fas fa-phone-alt"></i> Phone:{{user.phone}}</span>
+            <div class="card-body-links">
+               <!--<a routerLink='../user-card/{{ user?.id }}' class="posts"><i class="fas fa-user"></i> User info...</a>-->
+               <button routerLink="/user-card/{{ user.id }}" class="posts"><i class="fas fa-user"></i> User info...</button>
+            </div>
+        </div>
+    </div>
+</section>
+

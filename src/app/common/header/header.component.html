@@ -1,0 +1,11 @@
+<header class="app-header">
+    <div class="logo"><i class="fas fa-brain"></i><h1 class="website-header-title">Angular Nerds</h1></div>
+</header>
+<nav class="navigation-bar">
+    <div class="navigation-elements">
+      <a routerLink='/users'>Users</a>
+      <a routerLink='/blog-posts-list'>Blog Posts</a>
+      <a [routerLink]="['']">Home</a>
+      <a [routerLink]="['/new-post']">Write a post</a>
+    </div>
+</nav>

@@ -1,0 +1,26 @@
+<div class="write-post-form">
+    <div class="form-control">
+        <div class="input-element">
+            <label >Title</label>
+            <input [(ngModel)]="title">
+        </div>
+        <div class="input-element">
+            <label >User ID</label>
+            <select [(ngModel)]="userId" >
+                <option *ngFor = "let user of users" [value]="user.id">{{user.name}}</option>
+            </select>
+            <br>
+            <div class="input-element">
+                <label >Body</label>
+                <textarea [(ngModel)]="body"></textarea>
+            </div>
+        </div>
+
+        <button (click) = "submitPost()">Submit</button>
+    </div>
+</div>
+
+
+
+
+

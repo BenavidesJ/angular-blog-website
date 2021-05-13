@@ -1,0 +1,19 @@
+<div class="background">
+    <div class="main-title">
+        <h2>Latest Posts</h2>
+    </div>
+    <section class="cards" *ngFor="let post of latestPosts; let i = index;">
+        <div  *ngIf="i >= 90" class="card">
+            <div class="card-head">
+                <h4>{{post.title}}</h4>
+                <a href="#">Posted by: <i class="fas fa-user"></i> #{{post.userId}}</a>
+            </div>
+            <div class="card-body">
+                <p>{{post.body}}</p>
+            </div>
+            <div class="card-footer">
+                <a routerLink = "/comments/{{ post.id }}"><i class="fas fa-comment"></i> Comments...</a>
+            </div>
+        </div>
+    </section>
+</div>
